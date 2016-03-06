@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-3 col-md-offset-3">
+            <form role="form">
+                <div class="form-group">
+                    <br>
+                    <input type="text" class="form-control" ng-model="searchstr" placeholder="Search item here..." />
+                </div>
+            </form>
+        </div>
+        <div class="col-md-6 col-md-offset-3">
+            <h3>AngularJS Components</h3>
+<!--
+            <ul class="list-group-item" ng-repeat="item in items | filter:searchstr" )>
+                <li class="list-unstyled">{{item}}</li>
+            </ul>
+-->
+            <my-directive ng-repeat="item in items|filter:searchstr" item-data="item"></my-directive>
+            <br>
+
+            <a href="#/secondpage" class="btn btn-primary pull-right">Add Item</a>
+        </div>
+    </div>
+</div>
